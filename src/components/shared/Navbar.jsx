@@ -1,9 +1,11 @@
+import NaveLink from '@/ui/NaveLink';
+import Image from 'next/image';
 import React from 'react';
 
 const Navbar = () => {
     return (
-        <div>
-            <div className="max-lg:collapse bg-base-200  shadow-sm w-full rounded-md">
+        <div className='bg-base-200  shadow-sm w-full rounded-md'>
+            <div className="max-lg:collapse container mx-auto ">
                 <input id="navbar-1-toggle" className="peer hidden" type="checkbox" />
                 <label htmlFor="navbar-1-toggle" className="fixed inset-0 hidden max-lg:peer-checked:block"></label>
                 <div className="collapse-title lg:flex lg:justify-between">
@@ -14,38 +16,27 @@ const Navbar = () => {
                             </label>
                         
                         
-                            <button className="btn btn-ghost text-xl">daisyUI</button>
+                            <button className="btn btn-ghost text-xl">
+                                <Image
+                                src='/logo.png'
+                                alt='Navbar-logo'
+                                width={141}
+                                height={31}
+                                />
+                            </button>
                         
                         
                     </div>
                     <div className="hidden lg:flex">
                         <ul className="menu menu-horizontal px-1">
-                            <li><button>Item 1</button></li>
-                            <li>
-                                <details>
-                                    <summary>Parent</summary>
-                                    <ul className="p-2 bg-base-100 w-40 z-1">
-                                        <li><button>Submenu 1</button></li>
-                                        <li><button>Submenu 2</button></li>
-                                    </ul>
-                                </details>
-                            </li>
-                            <li><button>Item 3</button></li>
+                            <NaveLink></NaveLink>
                         </ul>
                     </div>
                 </div>
 
                 <div className="collapse-content lg:hidden z-1">
                     <ul className="menu">
-                        <li><button>Item 1</button></li>
-                        <li>
-                            <button>Parent</button>
-                            <ul>
-                                <li><button>Submenu 1</button></li>
-                                <li><button>Submenu 2</button></li>
-                            </ul>
-                        </li>
-                        <li><button>Item 3</button></li>
+                        <NaveLink></NaveLink>
                     </ul>
                 </div>
             </div>
