@@ -1,7 +1,11 @@
+import Banner from "@/components/homepage/Banner";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <h2>Home</h2>
+    <>
+      <Banner></Banner>
+      <hr className="w-9/12 mx-auto text-[#E9E9E9] my-10"/>
+    </>
   );
 }
