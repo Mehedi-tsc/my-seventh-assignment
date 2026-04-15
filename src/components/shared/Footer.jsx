@@ -7,6 +7,7 @@ const Footer = () => {
             <div className='w-9/12 mx-auto'>
                 <div className='flex justify-center'>
                     <Image
+                    
                         src='/logo-xl.png'
                         alt='Footer-Logo'
                         width={350}
@@ -19,7 +20,7 @@ const Footer = () => {
                     <Image
                         src='/instagram.png'
                         alt='Instagram-Logo'
-                        width={40}S
+                        width={40}
                         height={40}
                     />
                     <Image
