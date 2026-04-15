@@ -22,7 +22,7 @@ const Friend = ({ friend }) => {
 
                      <div className='flex gap-1 justify-center'>
                             {
-                                friend.tags.map(tag=> <div key={tag.id} className="text-[10px] badge badge-soft text-[#244D3F] bg-[#CBFADB]">{tag.toUpperCase()}</div>)
+                                friend.tags.map((tag , ind)=> <div key={ind} className="text-[10px] badge badge-soft text-[#244D3F] bg-[#CBFADB]">{tag.toUpperCase()}</div>)
                             }
                     </div>   
                     <div className='flex justify-center'>
