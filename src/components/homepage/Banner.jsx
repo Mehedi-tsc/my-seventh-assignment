@@ -10,7 +10,7 @@ const Banner = () => {
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'>
                 <div className="card bg-base-100 card-sm shadow-sm">
                     <div className="py-6">
-                        <h2 className="text-3xl font-semibold text-center">32</h2>
+                        <h2 className="text-3xl font-semibold text-center">8</h2>
                         <p className='text-lg text-[#64748B]'>Total Friends</p>
                     </div>
                 </div>
