@@ -2,7 +2,9 @@ import React from 'react';
 import Friend from './Friend';
 
 const CardSection = async() => {
-    const res = await fetch('https://my-seventh-assignment-blond.vercel.app/friends.json')
+    const res = await fetch('https://my-seventh-assignment-blond.vercel.app/friends.json', {
+        cache: 'no-store'
+    })
     const friends = await res.json();
     
     return (
