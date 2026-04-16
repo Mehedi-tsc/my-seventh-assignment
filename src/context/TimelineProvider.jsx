@@ -28,7 +28,7 @@ const handleClickTextBtn = (friend)=>{
 const handleClickVedioBtn = (friend)=>{
     const timelineData = {
         name: friend.name,
-        type: 'Vedio'
+        type: 'Video'
     }
     setTimelineStatus([...timelineStatus, timelineData ])
     toast(`${timelineData.name} is added succesfuly`)
