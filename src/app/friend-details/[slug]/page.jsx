@@ -12,10 +12,10 @@ const FriendDetails = ({ params }) => {
     const friend = friends.find(friend => friend.id == slug)
 
     return (
-        <div className='w-9/12 mx-auto my-8'>
+        <div className='w-10/12 mx-auto my-8'>
             <div className='grid grid-cols-5 grid-rows-8 gap-2'>
                 {/* card-1 */}
-                <div className="card bg-base-100 shadow-sm col-span-2 row-span-5">
+                <div className="card bg-base-100 shadow-sm col-span-5  lg:col-span-2 row-span-5">
                     <figure className='p-4 rounded-full'>
                         <Image
                             className='rounded-full'
@@ -43,22 +43,22 @@ const FriendDetails = ({ params }) => {
                     </div>
                 </div>
                 {/* card-2 */}
-                <div className="card space-y-2 bg-base-100 shadow-sm col-span-1 row-span-3 px-4 py-8 text-center">
+                <div className="card space-y-2 bg-base-100 shadow-sm col-span-5 lg:col-span-1 row-span-3 px-4 py-8 text-center">
                     <h2 className='font-semibold text-3xl text-[#244D3F]'>{friend.days_since_contact}</h2>
                     <p className='text-lg text-[#64748B]'>Days Since Contact</p>
                 </div>
                 {/* card-3 */}
-                <div className="card space-y-2 bg-base-100 shadow-sm col-span-1 row-span-3 px-4 py-8 text-center">
+                <div className="card space-y-2 bg-base-100 shadow-sm col-span-5 lg:col-span-1 row-span-3 px-4 py-8 text-center">
                     <h2 className='font-semibold text-3xl text-[#244D3F]'>{friend.goal}</h2>
                     <p className='text-lg text-[#64748B]'>Goal (Days)</p>
                 </div>
                 {/* card-4 */}
-                <div className="card space-y-2 bg-base-100 shadow-sm col-span-1 row-span-3 px-4 py-8 text-center">
+                <div className="card space-y-2 bg-base-100 shadow-sm col-span-5 lg:col-span-1 row-span-3 px-4 py-8 text-center">
                     <h2 className='font-semibold text-3xl text-[#244D3F]'>{friend.next_due_date}</h2>
                     <p className='text-lg text-[#64748B]'>Next Due</p>
                 </div>
                 {/* card-5 */}
-                <div className="card bg-base-100 shadow-sm col-span-3 row-span-2 px-4 py-8 flex-row justify-between">
+                <div className="card bg-base-100 shadow-sm col-span-5 lg:col-span-3 row-span-2 px-4 py-8 flex-row justify-between">
                     <div className='space-y-2'>
                         <h2 className='font-medium text-2xl text-[#244D3F]'>Relationship Goal</h2>
                         <p className='text-lg text-[#64748B]'>Connect every <span className='font-bold text-lg text-[#1F2937]'>{`${friend.goal} days`}</span></p>
@@ -80,8 +80,8 @@ const FriendDetails = ({ params }) => {
                 {/* card-7 */}
                 <div className='card bg-base-100 shadow-sm col-span-3 row-span-3 p-4'>
                     <h2 className='text-xl font-medium text-[#244D3F] mb-2'>Quick Check-In</h2>
-                    <div className='flex justify-between items-center'>
-                        <div className='cursor-pointer shadow-md active:shadow-sm bg-base-200 border border-base-200 rounded-xl space-y-2 flex flex-col justify-center items-center py-5 px-20'>
+                    <div className='flex gap-2 lg:justify-between items-center flex-wrap'>
+                        <div className='cursor-pointer shadow-md active:shadow-sm bg-base-200 border border-base-200 rounded-xl space-y-2 flex flex-col justify-center items-center py-5 px-15'>
                             <Image 
                              src='/call.png'
                              alt='Call Btn'
@@ -90,7 +90,7 @@ const FriendDetails = ({ params }) => {
                             />
                             <p className='text-lg'>Call</p>
                         </div>
-                        <div className='cursor-pointer shadow-md active:shadow-sm bg-base-200 border border-base-200 rounded-xl space-y-2 flex flex-col justify-center items-center py-5 px-20'>
+                        <div className='cursor-pointer shadow-md active:shadow-sm bg-base-200 border border-base-200 rounded-xl space-y-2 flex flex-col justify-center items-center py-5 px-15'>
                             <Image 
                              src='/text.png'
                              alt='Text Btn'
@@ -99,7 +99,7 @@ const FriendDetails = ({ params }) => {
                             />
                             <p className='text-lg'>Text</p>
                         </div>
-                        <div className='cursor-pointer shadow-md active:shadow-sm bg-base-200 border border-base-200 rounded-xl space-y-2 flex flex-col justify-center items-center py-5 px-20'>
+                        <div className='cursor-pointer shadow-md active:shadow-sm bg-base-200 border border-base-200 rounded-xl space-y-2 flex flex-col justify-center items-center py-5 px-15'>
                             <Image 
                              src='/video.png'
                              alt='Video Btn'
