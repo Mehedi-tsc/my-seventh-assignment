@@ -1,6 +1,8 @@
 'use client'
+import { timelineContext } from '@/context/TimelineProvider';
 import Image from 'next/image';
-import React, { use } from 'react';
+import Link from 'next/link';
+import React, { use, useContext } from 'react';
 
 const friendsData = fetch('https://my-seventh-assignment-blond.vercel.app/friends.json', {
     cache: 'no-store'
@@ -10,7 +12,7 @@ const FriendDetails = ({ params }) => {
     const { slug } = use(params);
     const friends = use(friendsData)
     const friend = friends.find(friend => friend.id == slug)
-
+    const {handleClickCallBtn, handleClickTextBtn, handleClickVedioBtn}=useContext(timelineContext);
     return (
         <div className='w-10/12 mx-auto my-8'>
             <div className='grid grid-cols-5 grid-rows-8 gap-2'>
@@ -80,8 +82,8 @@ const FriendDetails = ({ params }) => {
                 {/* card-7 */}
                 <div className='card bg-base-100 shadow-sm col-span-3 row-span-3 p-4'>
                     <h2 className='text-xl font-medium text-[#244D3F] mb-2'>Quick Check-In</h2>
-                    <div className='flex gap-2 lg:justify-between items-center flex-wrap'>
-                        <div className='cursor-pointer shadow-md active:shadow-sm bg-base-200 border border-base-200 rounded-xl space-y-2 flex flex-col justify-center items-center py-5 px-15'>
+                    <div className='flex gap-2 lg:justify-between items-center flex-col lg:flex-row'>
+                        <Link href='/timeline' onClick={()=>handleClickCallBtn(friend)} className='cursor-pointer shadow-md active:shadow-sm bg-base-200 border border-base-200 rounded-xl space-y-2 flex flex-col justify-center items-center py-5 w-[75%] lg:w-[25%]'>
                             <Image 
                              src='/call.png'
                              alt='Call Btn'
@@ -89,8 +91,8 @@ const FriendDetails = ({ params }) => {
                              height={32}
                             />
                             <p className='text-lg'>Call</p>
-                        </div>
-                        <div className='cursor-pointer shadow-md active:shadow-sm bg-base-200 border border-base-200 rounded-xl space-y-2 flex flex-col justify-center items-center py-5 px-15'>
+                        </Link>
+                        <Link href='/timeline' onClick={()=>handleClickTextBtn(friend)} className='cursor-pointer shadow-md active:shadow-sm bg-base-200 border border-base-200 rounded-xl space-y-2 flex flex-col justify-center items-center py-5 w-[75%] lg:w-[25%]'>
                             <Image 
                              src='/text.png'
                              alt='Text Btn'
@@ -98,8 +100,8 @@ const FriendDetails = ({ params }) => {
                              height={32}
                             />
                             <p className='text-lg'>Text</p>
-                        </div>
-                        <div className='cursor-pointer shadow-md active:shadow-sm bg-base-200 border border-base-200 rounded-xl space-y-2 flex flex-col justify-center items-center py-5 px-15'>
+                        </Link>
+                        <Link href='/timeline' onClick={()=>handleClickVedioBtn(friend)} className='cursor-pointer shadow-md active:shadow-sm bg-base-200 border border-base-200 rounded-xl space-y-2 flex flex-col justify-center items-center py-5 w-[75%] lg:w-[25%]'>
                             <Image 
                              src='/video.png'
                              alt='Video Btn'
@@ -107,7 +109,7 @@ const FriendDetails = ({ params }) => {
                              height={32}
                             />
                             <p className='text-lg'>Video</p>
-                        </div>
+                        </Link>
                     </div>
                 </div>
                 {/* card 8 */}
