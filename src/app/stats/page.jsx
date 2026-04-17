@@ -20,10 +20,10 @@ const StatsPage = () => {
         <div className='bg-[#F8FAFC]'>
             <div className='w-9/12 mx-auto my-10'>
                 <h2 className='mb-5 font-bold text-5xl text-[#1F2937]'>Friendship Analytics</h2>
-                <div className='p-5 card shadow-sm bg-base-100'>
+                <div className='p-5 shadow-sm bg-base-100'>
                     <h2 className='text-[#244D3F] text-lg font-medium mb-2'>By Interaction Type</h2>
                     <div>
-                        <PieChart className='mx-auto' style={{ width: '50%', maxWidth: '500px', maxHeight: '50vh', aspectRatio: 1 }} responsive>
+                        <PieChart className='mx-auto' style={{ width: '80%', maxWidth: '500px', maxHeight: '50vh', aspectRatio: 1 }} responsive>
                             <Pie
                                 data={data}
                                 innerRadius="80%"
@@ -37,7 +37,7 @@ const StatsPage = () => {
                             // isAnimationActive={isAnimationActive}
                             />
                             <Tooltip />
-                            <Legend wrapperStyle={{ paddingTop: '30px' }}/>
+                            <Legend wrapperStyle={{ paddingTop: '15px' }}/>
                             {/* <RechartsDevtools /> */}
                         </PieChart>
                     </div>
