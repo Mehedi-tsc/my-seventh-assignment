@@ -15,7 +15,7 @@ const handleClickCallBtn = (friend)=>{
         type: 'Call'
     }
     setTimelineStatus([...timelineStatus, timelineData ])
-    toast.success(`Call to ${timelineData.name} succesfull`)
+    toast.success(`Call succesfully to ${timelineData.name}`)
 }
 const handleClickTextBtn = (friend)=>{
     const timelineData = {
@@ -23,7 +23,7 @@ const handleClickTextBtn = (friend)=>{
         type: 'Text'
     }
     setTimelineStatus([...timelineStatus, timelineData ])
-    toast.success(`Sent text to ${timelineData.name} succesfull`)
+    toast.success(`Sent text succesfully to ${timelineData.name}`)
 }
 const handleClickVedioBtn = (friend)=>{
     const timelineData = {
@@ -31,7 +31,7 @@ const handleClickVedioBtn = (friend)=>{
         type: 'Video'
     }
     setTimelineStatus([...timelineStatus, timelineData ])
-    toast.success(`Video call to ${timelineData.name} succesfull`)
+    toast.success(`Video call succesfully to ${timelineData.name}`)
 }
 
     const data={
