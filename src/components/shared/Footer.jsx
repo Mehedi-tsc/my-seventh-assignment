@@ -37,7 +37,7 @@ const Footer = () => {
                     />
                    
                 </div>
-                <div className='mt-16 flex justify-between'>
+                <div className='mt-16 flex justify-between pt-7 border-t border-[#1A8862]/40'>
                     <p className='text-[#FAFAFA]/50'>© 2026 KeenKeeper. All rights reserved.</p>
                     <div className='flex gap-5'>
                         <p className='text-[#FAFAFA]/50'>Privacy Policy   </p>
